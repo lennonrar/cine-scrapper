@@ -17,5 +17,8 @@ def get_tmdb_score(movie_name: str) -> Optional[float]:
     response_data = get_data(url=url, header=header)
     response = TMDBResponse(**response_data)
     if response.get('results'):
-        return response.get('results', [])[0].get('vote_average', None)
+        vote_count = response.get('results', [])[0].get('vote_count', None)
+        vote_avg = response.get('results', [])[0].get('vote_average', None)
+        return vote_avg if vote_count > 0 else None
+
     return None

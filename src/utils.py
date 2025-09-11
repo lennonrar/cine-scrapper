@@ -1,11 +1,10 @@
 import os
-from datetime import datetime as dt, timedelta
+from datetime import datetime as dt
 from dotenv import load_dotenv
 
 
 def get_today() -> str:
     now = dt.now()
-    now = now + timedelta(days=4)
     today_formatted = now.strftime('%Y-%m-%d')
     return today_formatted
 

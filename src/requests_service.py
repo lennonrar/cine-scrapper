@@ -1,6 +1,8 @@
-from typing import Optional
+import json
 import requests
+from typing import Optional
 from http import HTTPStatus
+from requests.exceptions import RequestException
 
 
 def get_html_page(url: str) -> str:
@@ -15,5 +17,9 @@ def get_data(url: str, header: Optional[dict] = None) -> dict:
     print(f"Fetching {url}...")
     response = requests.get(url, headers=header)
     if response.status_code == HTTPStatus.OK:
-        return response.json()
-    raise Exception(response.reason)
+        response_data = response.json()
+        if type(response.json()) == str:
+            response_data = json.loads(response_data)
+
+        return response_data
+    raise RequestException(response.reason)
