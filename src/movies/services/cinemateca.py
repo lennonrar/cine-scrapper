@@ -2,7 +2,6 @@ from typing import List, Optional
 from src.movies.movies import Movie
 from src.requests_service import get_html_page
 from src.soup import get_soup
-from src.tmdb.tmdb_service import get_tmdb_score
 from src.utils import get_today
 
 
@@ -35,8 +34,7 @@ def get_movies_cinemateca(
                     Movie(
                         movie_name,
                         event_location.get_text(strip=True),
-                        event_datetime.get_text(strip=True),
-                        get_tmdb_score(movie_name)
+                        event_datetime.get_text(strip=True)
                     )
                 )
     else:

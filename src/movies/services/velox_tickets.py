@@ -3,7 +3,6 @@ from typing import List, Optional
 from requests import RequestException
 from src.movies.movies import Movie
 from src.requests_service import get_data
-from src.tmdb.tmdb_service import get_tmdb_score
 from src.utils import get_today
 
 URL = "https://www.veloxtickets.com/Parceiro/P-BELASARTES/AjaxService/LocalDetail/ServiceGetSessions?date={}&localCode=BLT&cityCode=saopaulo"  # noqa: E501
@@ -30,8 +29,7 @@ def get_movies_belasartes(
             Movie(
                 movie_name,
                 rooms[0].get("roomName"),
-                rooms[0].get("schedules")[0].get("startTime"),
-                get_tmdb_score(movie_name)
+                rooms[0].get("schedules")[0].get("startTime")
             )
         )
 
