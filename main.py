@@ -6,6 +6,8 @@ from src.utils import get_today
 from datetime import datetime
 from datetime import date, timedelta
 
+LIMIT_HOUR = 18
+
 
 def main(date2search: Optional[str]):
     movies = get_movies_cinemateca(date2search)
@@ -26,11 +28,13 @@ if __name__ == '__main__':
         date2search = today
 
     current_hour = datetime.now().hour
-    if date2search == today and current_hour >= 20:
+    if date2search == today and current_hour >= LIMIT_HOUR:
         date2search = (
             date.today() + timedelta(days=1)
             ).strftime('%Y-%m-%d')
-        print(f"After 20:00, showing results for tomorrow: {date2search}")
+        print(
+            f"After {LIMIT_HOUR}:00, showing results for tomorrow: {date2search}"
+        )
 
     main(date2search)
     print('End of execution')
