@@ -16,6 +16,7 @@ class Movie:
         self.tmdb_score = tmdb_score if tmdb_score else get_tmdb_score(
             self._sanitize_moviename(name)
             )
+        self.min_score = 7
 
     def __str__(self):
         return f"{self.name}, {self.time}, {self.local}, {self.tmdb_score}"
@@ -26,3 +27,7 @@ class Movie:
             return moviename.split(':')[-1]
 
         return moviename
+
+    def meets_score_threshold(self) -> bool:
+        """Check if movie meets minimum score threshold"""
+        return self.tmdb_score is not None and self.tmdb_score >= self.min_score
