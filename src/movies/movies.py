@@ -8,18 +8,41 @@ class Movie:
             self, name: str,
             local: str,
             time: str,
-            tmdb_score: Optional[float] = None
+            tmdb_score: Optional[float] = None,
+            duration: Optional[str] = None,
+            cached: bool = False
             ):
         self.name = name
         self.local = local
         self.time = time
-        self.tmdb_score = tmdb_score if tmdb_score else get_tmdb_score(
-            self._sanitize_moviename(name)
-            )
+        self.duration = duration
+        self.tmdb_score = (
+            tmdb_score if tmdb_score or cached
+            else get_tmdb_score(self._sanitize_moviename(name))
+        )
         self.min_score = 7
 
+    def to_dict(self) -> dict:
+        return {
+            'name': self.name,
+            'duration': self.duration,
+            'date': self.time.split(' ')[0] if ' ' in self.time else None,
+            'time': self.time.split(' ')[1] if ' ' in self.time else self.time,
+            'local': self.local,
+            'tmdb_score': self.tmdb_score
+        }
+
     def __str__(self):
-        return f"{self.name}, {self.time}, {self.local}, {self.tmdb_score}"
+        return f"{self.name}, {self.time}, {self.local}"
+
+    def to_json(self):
+        """Convert Movie object to JSON serializable dictionary"""
+        return {
+            'name': self.name,
+            'local': self.local,
+            'time': self.time,
+            'tmdb_score': self.tmdb_score,
+        }
 
     @staticmethod
     def _sanitize_moviename(moviename: str) -> str:
@@ -30,4 +53,5 @@ class Movie:
 
     def meets_score_threshold(self) -> bool:
         """Check if movie meets minimum score threshold"""
-        return self.tmdb_score is not None and self.tmdb_score >= self.min_score
+        return (self.tmdb_score is not None and
+                self.tmdb_score >= self.min_score)
