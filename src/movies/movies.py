@@ -33,7 +33,9 @@ class Movie:
         }
 
     def __str__(self):
-        return f"{self.name}, {self.time}, {self.local}"
+        score = self.tmdb_score if self.tmdb_score else 'N/A'
+        return (f"{self.name:<50} | {self.time:<8} | {self.local:<50} | "
+                f"TMDB Score: {score:<5}")
 
     def to_json(self):
         """Convert Movie object to JSON serializable dictionary"""

@@ -15,12 +15,17 @@ MIN_SCORE = 7
 TODAY = get_today()
 
 
-def main(date2search: Optional[str] = TODAY, boring_mode: bool = False):
+def main(
+        date2search: Optional[str] = TODAY,
+        boring_mode: bool = False,
+        force_refresh: bool = False
+        ):
+
     cache = init_redis()
     hashKey = f"movies:{date2search}"
     movies_hash = cache.getHash(hashKey)
 
-    if not movies_hash:
+    if not movies_hash or force_refresh:
         print("Cache miss, fetching movies...")
         movies = get_movies_cinemateca(date2search)
         movies.extend(get_movies_belasartes(date2search))
@@ -38,7 +43,7 @@ def main(date2search: Optional[str] = TODAY, boring_mode: bool = False):
         cache.setHash(
             hashKey,
             hashObject,
-            expire=21600,
+            expire=43200,  # 12 hours
         )
     else:
         print("Cache hit, loading movies from cache.")
@@ -66,15 +71,20 @@ def main(date2search: Optional[str] = TODAY, boring_mode: bool = False):
 
 
 if __name__ == "__main__":
-
     date2search = None
     boring_mode = False
+    force_refresh = False
+
     if len(sys.argv) > 1:
         date2search = sys.argv[1]
 
     if len(sys.argv) > 2 and sys.argv[2] == "--boring":
         boring_mode = True
         print(f"Boring mode activated: Only movies above {MIN_SCORE} will be shown")  # noqa: E501
+
+    if len(sys.argv) > 2 and sys.argv[3] == "--force-refresh":
+        force_refresh = True
+        print("Force refresh activated: Fetching movies from source")  # noqa: E501
 
     if not date2search:
         date2search = TODAY
@@ -84,6 +94,10 @@ if __name__ == "__main__":
         date2search = (date.today() + timedelta(days=1)).strftime("%Y-%m-%d")
         print(f"After {LIMIT_HOUR}:00, showing results for tomorrow: " f"{date2search}")  # noqa: E501
 
-    main(date2search, boring_mode)
+    main(
+        date2search=date2search,
+        boring_mode=boring_mode,
+        force_refresh=force_refresh
+        )
 
     print("End of execution")
