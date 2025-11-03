@@ -1,9 +1,8 @@
 from src.init import init_redis
 import sys
-from typing import Optional
+from typing import Optional, Dict, cast
 from src.movies.movies import Movie
 from src.movies.services.cinemateca import get_movies_cinemateca
-from src.movies.services.mostra import get_movies_mostra
 from src.movies.services.velox_tickets import get_movies_belasartes
 from src.utils import get_today
 from datetime import datetime
@@ -29,7 +28,6 @@ def main(
         print("Cache miss, fetching movies...")
         movies = get_movies_cinemateca(date2search)
         movies.extend(get_movies_belasartes(date2search))
-        movies.extend(get_movies_mostra(date2search))
 
         hashObject = {
             "movies": json.dumps(
@@ -47,7 +45,9 @@ def main(
         )
     else:
         print("Cache hit, loading movies from cache.")
-        cached_movies = movies_hash[b'movies'].decode('utf-8')
+        cached_movies = cast(
+                Dict[bytes, bytes], movies_hash
+            )[b'movies'].decode('utf-8')
         movies_data = json.loads(cached_movies, parse_float=float)
         movies = [
             Movie(
