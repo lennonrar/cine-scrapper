@@ -6,17 +6,23 @@ from src.requests_service import get_data
 from src.utils import get_today
 
 URL = "https://www.veloxtickets.com/Parceiro/P-BELASARTES/AjaxService/LocalDetail/ServiceGetSessions?date={}&localCode=BLT&cityCode=saopaulo"  # noqa: E501
+URL_CINEMA_AUGUSTA = (
+    "https://www.veloxtickets.com/Portal/AjaxService/LocalDetail/"
+    "ServiceGetSessions?date={}&localCode=AG1&cityCode=saopaulo"
+)
 
 
-def get_movies_belasartes(
-        date2search: Optional[str] = get_today()
+def _get_movies_from_url(
+        title: str,
+        url_template: str,
+        date2search: Optional[str]
         ) -> List[Movie]:
-    print("Fetching movies from Belas Artes...")
+    print(f"Fetching movies from {title}...")
     movies = []
-    url_belas = URL.format(date2search)
-    print(url_belas)
+    url = url_template.format(date2search)
+    print(url)
     try:
-        response = get_data(url_belas)
+        response = get_data(url)
     except RequestException:
         return movies
 
@@ -34,3 +40,19 @@ def get_movies_belasartes(
         )
 
     return movies
+
+
+def get_movies_belasartes(
+        date2search: Optional[str] = get_today()
+        ) -> List[Movie]:
+    return _get_movies_from_url("Belas Artes", URL, date2search)
+
+
+def get_movies_cinema_augusta(
+        date2search: Optional[str] = get_today()
+        ) -> List[Movie]:
+    return _get_movies_from_url(
+        "Cinema Augusta",
+        URL_CINEMA_AUGUSTA,
+        date2search,
+    )
