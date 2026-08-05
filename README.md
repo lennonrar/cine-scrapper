@@ -52,6 +52,8 @@ Example:
 python main.py 2025-10-19
 ```
 
+You can also pass a day of month like `1` or `10`, which uses the current month and year, or a month-day value like `07-01`, which uses the current year.
+
 ### Show Only High-Rated Movies:
 Add the `--boring` flag to show only movies with TMDB ratings above 7.0:
 ```bash

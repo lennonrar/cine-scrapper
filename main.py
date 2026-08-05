@@ -1,7 +1,7 @@
 import json
-import sys
 from datetime import date, datetime, timedelta
 import argparse
+import re
 from typing import Dict, Optional, cast
 
 from src.init import init_redis
@@ -16,6 +16,24 @@ from src.utils import get_today
 LIMIT_HOUR = 18
 MIN_SCORE = 7
 TODAY = get_today()
+
+
+def normalize_date_input(date_input: Optional[str]) -> str:
+    if not date_input:
+        return TODAY
+
+    normalized_input = date_input.strip()
+
+    if re.fullmatch(r"\d{4}-\d{2}-\d{2}", normalized_input):
+        return normalized_input
+
+    if re.fullmatch(r"\d{2}-\d{2}", normalized_input):
+        return f"{date.today().year}-{normalized_input}"
+
+    if re.fullmatch(r"\d{1,2}", normalized_input):
+        return f"{date.today().year}-{date.today().month:02d}-{int(normalized_input):02d}"
+
+    return normalized_input
 
 
 def main(
@@ -81,12 +99,12 @@ if __name__ == "__main__":
     parser.add_argument(
         "date",
         nargs="?",
-        help="Date to search in YYYY-MM-DD format",
+        help="Date to search as YYYY-MM-DD, MM-DD, or day of month",
     )
     parser.add_argument(
         "--date",
         dest="date_option",
-        help="Date to search in YYYY-MM-DD format",
+        help="Date to search as YYYY-MM-DD, MM-DD, or day of month",
     )
     parser.add_argument(
         "--boring",
@@ -101,7 +119,7 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    date2search = args.date_option or args.date or TODAY
+    date2search = normalize_date_input(args.date_option or args.date)
     boring_mode = args.boring
     force_refresh = args.force_refresh
 

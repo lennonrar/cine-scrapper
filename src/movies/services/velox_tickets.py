@@ -31,11 +31,29 @@ def _get_movies_from_url(
         event = obj.get("event")
         rooms = obj.get("rooms")
         movie_name = event.get("eventTitle")
+        ticket_url = None
+        for candidate in (
+            event.get("ticketUrl"),
+            event.get("salesUrl"),
+            event.get("url"),
+            event.get("link"),
+            event.get("eventUrl"),
+            event.get("detailUrl"),
+            event.get("eventLink"),
+            obj.get("ticketUrl"),
+            obj.get("salesUrl"),
+            obj.get("url"),
+            obj.get("link"),
+        ):
+            if candidate:
+                ticket_url = candidate
+                break
         movies.append(
             Movie(
                 movie_name,
                 rooms[0].get("roomName"),
-                rooms[0].get("schedules")[0].get("startTime")
+                rooms[0].get("schedules")[0].get("startTime"),
+                ticket_url=ticket_url,
             )
         )
 

@@ -5,15 +5,15 @@ from http import HTTPStatus
 from requests.exceptions import RequestException
 
 
-def get_html_page(url: str) -> str:
-    response = requests.get(url, timeout=10)
+def get_html_page(url: str, timeout: int = 10) -> str:
+    response = requests.get(url, timeout=timeout)
     if response.status_code == HTTPStatus.OK:
         return response.content
     raise Exception(response.reason)
 
 
-def get_data(url: str, header: Optional[dict] = None) -> dict:
-    response = requests.get(url, headers=header, timeout=10)
+def get_data(url: str, header: Optional[dict] = None, timeout: int = 10) -> dict:
+    response = requests.get(url, headers=header, timeout=timeout)
     if response.status_code == HTTPStatus.OK:
         response_data = response.json()
         if type(response.json()) == str:

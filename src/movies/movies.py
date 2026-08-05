@@ -1,6 +1,6 @@
 from typing import Optional
 
-from src.tmdb.tmdb_service import get_tmdb_score
+from src.tmdb.tmdb_service import get_tmdb_details
 
 
 class Movie:
@@ -10,16 +10,21 @@ class Movie:
             time: str,
             tmdb_score: Optional[float] = None,
             duration: Optional[str] = None,
-            cached: bool = False
+            cached: bool = False,
+            tmdb_url: Optional[str] = None,
+            ticket_url: Optional[str] = None
             ):
         self.name = name
         self.local = local
         self.time = time
         self.duration = duration
-        self.tmdb_score = (
-            tmdb_score if tmdb_score or cached
-            else get_tmdb_score(self._sanitize_moviename(name))
-        )
+        self.ticket_url = ticket_url
+        self.tmdb_url = tmdb_url
+        self.tmdb_score = tmdb_score
+        if self.tmdb_score is None and not cached:
+            self.tmdb_score, self.tmdb_url = get_tmdb_details(
+                self._sanitize_moviename(name)
+            )
         self.min_score = 7
 
     def to_dict(self) -> dict:
@@ -29,13 +34,25 @@ class Movie:
             'date': self.time.split(' ')[0] if ' ' in self.time else None,
             'time': self.time.split(' ')[1] if ' ' in self.time else self.time,
             'local': self.local,
-            'tmdb_score': self.tmdb_score
+            'tmdb_score': self.tmdb_score,
+            'tmdb_url': self.tmdb_url,
+            'ticket_url': self.ticket_url,
         }
 
     def __str__(self):
         score = self.tmdb_score if self.tmdb_score else 'N/A'
-        return (f"{self.name:<50} | {self.time:<8} | {self.local:<50} | "
-                f"TMDB Score: {score:<5}")
+        base = (
+            f"{self.name:<50} | {self.time:<8} | {self.local:<50} | "
+            f"TMDB Score: {score:<5}"
+        )
+        links = []
+        if self.ticket_url:
+            links.append(f"Tickets: {self.ticket_url}")
+        if self.tmdb_url:
+            links.append(f"TMDB: {self.tmdb_url}")
+        if links:
+            return f"{base} | {' | '.join(links)}"
+        return base
 
     def to_json(self):
         """Convert Movie object to JSON serializable dictionary"""
@@ -44,6 +61,8 @@ class Movie:
             'local': self.local,
             'time': self.time,
             'tmdb_score': self.tmdb_score,
+            'tmdb_url': self.tmdb_url,
+            'ticket_url': self.ticket_url,
         }
 
     @staticmethod
