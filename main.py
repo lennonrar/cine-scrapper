@@ -7,6 +7,7 @@ from typing import Dict, Optional, cast
 from src.init import init_redis
 from src.movies.movies import Movie
 from src.movies.services.cinemateca import get_movies_cinemateca
+from src.movies.services.ims import get_movies_ims
 from src.movies.services.velox_tickets import (
     get_movies_belasartes,
     get_movies_cinema_augusta,
@@ -50,6 +51,7 @@ def main(
         movies = get_movies_cinemateca(date2search)
         movies.extend(get_movies_belasartes(date2search))
         movies.extend(get_movies_cinema_augusta(date2search))
+        movies.extend(get_movies_ims(date2search))
 
         hash_obj = {
             "movies": json.dumps(
