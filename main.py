@@ -2,7 +2,7 @@ import json
 from datetime import date, datetime, timedelta
 import argparse
 import re
-from typing import Dict, Optional, cast
+from typing import Optional
 
 from src.init import init_redis
 from src.movies.movies import Movie
@@ -16,6 +16,7 @@ from src.utils import get_today
 
 LIMIT_HOUR = 18
 MIN_SCORE = 7
+MOVIES_TTL = 18 * 3600  # 64800 seconds
 TODAY = get_today()
 
 
@@ -63,25 +64,13 @@ def main(
         cache.setHash(
             hash_key,
             hash_obj,
-            expire=43200,  # 12 hours
+            expire=MOVIES_TTL,
         )
     else:
         print("Cache hit, loading movies from cache.")
-        cached_movies = cast(
-            Dict[bytes, bytes], movies_hash
-        )[b'movies'].decode('utf-8')
+        cached_movies = movies_hash[b'movies'].decode('utf-8')
         movies_data = json.loads(cached_movies, parse_float=float)
-        movies = [
-            Movie(
-                name=movie['name'],
-                local=movie['local'],
-                time=movie['time'],
-                tmdb_score=movie.get('tmdb_score'),
-                duration=movie.get('duration'),
-                cached=True
-            )
-            for movie in movies_data
-        ]
+        movies = [Movie(**movie, cached=True) for movie in movies_data]
 
     print("*" * 20)
 

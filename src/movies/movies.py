@@ -60,6 +60,7 @@ class Movie:
             'name': self.name,
             'local': self.local,
             'time': self.time,
+            'duration': self.duration,
             'tmdb_score': self.tmdb_score,
             'tmdb_url': self.tmdb_url,
             'ticket_url': self.ticket_url,
