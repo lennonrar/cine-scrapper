@@ -62,9 +62,23 @@ python main.py --boring
 python main.py 2025-10-19 --boring
 ```
 
+### Force a Refresh:
+Add the `--force-refresh` flag to bypass the movie-list cache and re-scrape
+all venues:
+```bash
+python main.py --force-refresh
+```
+This re-fetches venue schedules only. Cached TMDB scores and links are kept
+— it does not re-query TMDB for titles already resolved. To force a single
+title's score to be re-fetched, delete its cache entry manually:
+```bash
+docker compose exec redis redis-cli DEL "tmdb:<title>"
+```
+
 ## Features
 
-- Caches results in Redis for 6 hours
+- Caches movie-list results in Redis for 18 hours
+- Caches TMDB scores and links per title, independent of the movie list
 - Filters duplicate movies
 - Shows TMDB ratings when available
 - Sorts movies by showtime
@@ -72,7 +86,10 @@ python main.py 2025-10-19 --boring
 
 ## Cache Management
 
-The program uses Redis to cache movie data. Cache entries expire after 6 hours (21600 seconds).
+The program uses Redis to cache movie data. Movie-list entries
+(`movies:<date>`) expire after 18 hours (64800 seconds). TMDB entries
+(`tmdb:<title>`) expire after 30 days if a score was found, or 5 days if
+the title had no match.
 
 To clear the cache manually:
 ```bash
