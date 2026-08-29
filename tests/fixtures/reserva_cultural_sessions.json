@@ -1,0 +1,1270 @@
+[
+  {
+    "date": "2026-08-29",
+    "dateFormatted": "29/08",
+    "dayOfWeek": "sábado",
+    "isToday": true,
+    "movies": [
+      {
+        "id": "30413",
+        "b2BId": null,
+        "type": "Filme",
+        "title": "A Odisseia",
+        "originalTitle": "The Odyssey",
+        "movieIdUrl": "",
+        "inPreSale": false,
+        "isReexhibition": false,
+        "duration": "172",
+        "contentRating": "14 anos",
+        "distributor": "Universal Pictures Brasil",
+        "urlKey": "a-odisseia",
+        "siteURL": "https://www.ingresso.com/filme/a-odisseia?city=sao-paulo&partnership=home",
+        "nationalSiteURL": "https://www.ingresso.com/filme/a-odisseia?city=sao-paulo&partnership=home",
+        "siteURLByTheater": "https://www.ingresso.com/filme/a-odisseia?city=sao-paulo&partnership=home#cinema=cinema-reserva-cultural-sao-paulo",
+        "nationalSiteURLByTheater": "https://www.ingresso.com/filme/a-odisseia?city=sao-paulo&partnership=home#cinema=cinema-reserva-cultural-sao-paulo",
+        "ancineId": "",
+        "images": [
+          {
+            "url": "https://ingresso-a.akamaihd.net/prd/img/movie/a-odisseia/91713f7f-195b-4d60-89c2-8c94588f7aa5.webp",
+            "type": "PosterPortrait"
+          },
+          {
+            "url": "https://ingresso-a.akamaihd.net/prd/img/movie/a-odisseia/640ae222-42a8-427d-b950-4ed71d27dbe9.webp",
+            "type": "PosterHorizontal"
+          }
+        ],
+        "trailers": [
+          {
+            "type": "YouTube",
+            "url": "https://www.youtube.com/watch?v=CWQyZSd-mC8",
+            "embeddedUrl": "//www.youtube.com/embed/CWQyZSd-mC8"
+          },
+          {
+            "type": "YouTube",
+            "url": "https://www.youtube.com/watch?v=NJV9Pw2kXc4",
+            "embeddedUrl": "//www.youtube.com/embed/NJV9Pw2kXc4"
+          },
+          {
+            "type": "YouTube",
+            "url": "https://www.youtube.com/watch?v=GcI3K4_-CuQ",
+            "embeddedUrl": "//www.youtube.com/embed/GcI3K4_-CuQ"
+          }
+        ],
+        "genres": [
+          "Ação",
+          "Aventura",
+          "Épico",
+          "Fantasia"
+        ],
+        "ratingDescriptors": [
+          "Violência"
+        ],
+        "accessibilityHubs": [],
+        "tags": [],
+        "completeTags": [],
+        "rooms": null,
+        "sessionTypes": [
+          {
+            "type": [
+              "Laser",
+              "Legendado"
+            ],
+            "sessions": [
+              {
+                "id": "86555870",
+                "boxOfficeId": "9c20c2df-7a42-470e-8bec-fbe42831c534",
+                "eventBoxOfficeId": "1762",
+                "price": 54.72,
+                "room": "Sala 3",
+                "type": [
+                  "Laser",
+                  "Legendado"
+                ],
+                "types": [
+                  {
+                    "id": 1073741824,
+                    "name": "Laser",
+                    "alias": "Laser",
+                    "display": true,
+                    "typeDescriptions": {
+                      "detailedImage": "https://ingresso-a.akamaihd.net/prd/img/sessiontype/"
+                    }
+                  },
+                  {
+                    "id": 0,
+                    "name": "Legendado",
+                    "alias": "LEG",
+                    "display": true,
+                    "typeDescriptions": {
+                      "detailedImage": "https://ingresso-a.akamaihd.net/prd/img/copytype/"
+                    }
+                  }
+                ],
+                "date": {
+                  "localDate": "2026-08-29T20:20:00-03:00",
+                  "isToday": true,
+                  "dayOfWeek": "sábado",
+                  "dayAndMonth": "29/08",
+                  "hour": "20:20",
+                  "year": "2026"
+                },
+                "realDate": {
+                  "localDate": "2026-08-29T20:20:00-03:00",
+                  "isToday": true,
+                  "dayOfWeek": "sábado",
+                  "dayAndMonth": "29/08",
+                  "hour": "20:20",
+                  "year": "2026"
+                },
+                "time": "20:20",
+                "defaultSector": "4590742",
+                "midnightMessage": null,
+                "siteURL": "https://checkout.ingresso.com/?sessionId=86555870&partnership=home",
+                "nationalSiteURL": null,
+                "appCheckoutUrl": "",
+                "hasSeatSelection": true,
+                "driveIn": false,
+                "streaming": false,
+                "isNewCheckout": true,
+                "maxTicketsPerCar": 0,
+                "enabled": true,
+                "blockMessage": ""
+              }
+            ]
+          }
+        ],
+        "ratingDetails": {
+          "id": 2,
+          "name": "14 anos",
+          "label": "14",
+          "displayName": "14 anos",
+          "description": "Atos Criminosos, Conteúdo Sexual, Linguagem Imprópria, Temas Sensíveis, Violência, Estigma ou Preconceito.",
+          "color": "#F58220"
+        }
+      },
+      {
+        "id": "30807",
+        "b2BId": null,
+        "type": "Filme",
+        "title": "As Cores Do Tempo",
+        "originalTitle": "La Venue De L'avenir",
+        "movieIdUrl": "",
+        "inPreSale": false,
+        "isReexhibition": false,
+        "duration": "124",
+        "contentRating": "14 anos",
+        "distributor": "Imovision",
+        "urlKey": "as-cores-do-tempo",
+        "siteURL": "https://www.ingresso.com/filme/as-cores-do-tempo?city=sao-paulo&partnership=home",
+        "nationalSiteURL": "https://www.ingresso.com/filme/as-cores-do-tempo?city=sao-paulo&partnership=home",
+        "siteURLByTheater": "https://www.ingresso.com/filme/as-cores-do-tempo?city=sao-paulo&partnership=home#cinema=cinema-reserva-cultural-sao-paulo",
+        "nationalSiteURLByTheater": "https://www.ingresso.com/filme/as-cores-do-tempo?city=sao-paulo&partnership=home#cinema=cinema-reserva-cultural-sao-paulo",
+        "ancineId": "",
+        "images": [
+          {
+            "url": "https://ingresso-a.akamaihd.net/prd/img/movie/as-cores-do-tempo/9c67e711-3f66-4bf2-89f3-58959eaf9eb9.webp",
+            "type": "PosterPortrait"
+          }
+        ],
+        "trailers": [
+          {
+            "type": "YouTube",
+            "url": "https://www.youtube.com/watch?v=oP0rg9lQy0E",
+            "embeddedUrl": "//www.youtube.com/embed/oP0rg9lQy0E"
+          }
+        ],
+        "genres": [
+          "Comédia",
+          "Drama"
+        ],
+        "ratingDescriptors": [
+          "Conteúdo Sexual",
+          "Drogas",
+          "Nudez"
+        ],
+        "accessibilityHubs": [],
+        "tags": [],
+        "completeTags": [],
+        "rooms": null,
+        "sessionTypes": [
+          {
+            "type": [
+              "Laser",
+              "Legendado"
+            ],
+            "sessions": [
+              {
+                "id": "86556872",
+                "boxOfficeId": "74f0733f-11e0-4cf1-8ee2-538c576e2337",
+                "eventBoxOfficeId": "1610",
+                "price": 54.72,
+                "room": "Sala 1",
+                "type": [
+                  "Laser",
+                  "Legendado"
+                ],
+                "types": [
+                  {
+                    "id": 1073741824,
+                    "name": "Laser",
+                    "alias": "Laser",
+                    "display": true,
+                    "typeDescriptions": {
+                      "detailedImage": "https://ingresso-a.akamaihd.net/prd/img/sessiontype/"
+                    }
+                  },
+                  {
+                    "id": 0,
+                    "name": "Legendado",
+                    "alias": "LEG",
+                    "display": true,
+                    "typeDescriptions": {
+                      "detailedImage": "https://ingresso-a.akamaihd.net/prd/img/copytype/"
+                    }
+                  }
+                ],
+                "date": {
+                  "localDate": "2026-08-29T15:50:00-03:00",
+                  "isToday": true,
+                  "dayOfWeek": "sábado",
+                  "dayAndMonth": "29/08",
+                  "hour": "15:50",
+                  "year": "2026"
+                },
+                "realDate": {
+                  "localDate": "2026-08-29T15:50:00-03:00",
+                  "isToday": true,
+                  "dayOfWeek": "sábado",
+                  "dayAndMonth": "29/08",
+                  "hour": "15:50",
+                  "year": "2026"
+                },
+                "time": "15:50",
+                "defaultSector": "4590743",
+                "midnightMessage": null,
+                "siteURL": "https://checkout.ingresso.com/?sessionId=86556872&partnership=home",
+                "nationalSiteURL": null,
+                "appCheckoutUrl": "",
+                "hasSeatSelection": true,
+                "driveIn": false,
+                "streaming": false,
+                "isNewCheckout": true,
+                "maxTicketsPerCar": 0,
+                "enabled": true,
+                "blockMessage": ""
+              },
+              {
+                "id": "86556663",
+                "boxOfficeId": "362bd715-9fa5-4a25-816b-26c3135acef5",
+                "eventBoxOfficeId": "1610",
+                "price": 54.72,
+                "room": "Sala 1",
+                "type": [
+                  "Laser",
+                  "Legendado"
+                ],
+                "types": [
+                  {
+                    "id": 1073741824,
+                    "name": "Laser",
+                    "alias": "Laser",
+                    "display": true,
+                    "typeDescriptions": {
+                      "detailedImage": "https://ingresso-a.akamaihd.net/prd/img/sessiontype/"
+                    }
+                  },
+                  {
+                    "id": 0,
+                    "name": "Legendado",
+                    "alias": "LEG",
+                    "display": true,
+                    "typeDescriptions": {
+                      "detailedImage": "https://ingresso-a.akamaihd.net/prd/img/copytype/"
+                    }
+                  }
+                ],
+                "date": {
+                  "localDate": "2026-08-29T18:20:00-03:00",
+                  "isToday": true,
+                  "dayOfWeek": "sábado",
+                  "dayAndMonth": "29/08",
+                  "hour": "18:20",
+                  "year": "2026"
+                },
+                "realDate": {
+                  "localDate": "2026-08-29T18:20:00-03:00",
+                  "isToday": true,
+                  "dayOfWeek": "sábado",
+                  "dayAndMonth": "29/08",
+                  "hour": "18:20",
+                  "year": "2026"
+                },
+                "time": "18:20",
+                "defaultSector": "4590743",
+                "midnightMessage": null,
+                "siteURL": "https://checkout.ingresso.com/?sessionId=86556663&partnership=home",
+                "nationalSiteURL": null,
+                "appCheckoutUrl": "",
+                "hasSeatSelection": true,
+                "driveIn": false,
+                "streaming": false,
+                "isNewCheckout": true,
+                "maxTicketsPerCar": 0,
+                "enabled": true,
+                "blockMessage": ""
+              },
+              {
+                "id": "86556281",
+                "boxOfficeId": "c8ed86d8-c5e5-4700-a0e1-6c3462fea279",
+                "eventBoxOfficeId": "1610",
+                "price": 54.72,
+                "room": "Sala 1",
+                "type": [
+                  "Laser",
+                  "Legendado"
+                ],
+                "types": [
+                  {
+                    "id": 1073741824,
+                    "name": "Laser",
+                    "alias": "Laser",
+                    "display": true,
+                    "typeDescriptions": {
+                      "detailedImage": "https://ingresso-a.akamaihd.net/prd/img/sessiontype/"
+                    }
+                  },
+                  {
+                    "id": 0,
+                    "name": "Legendado",
+                    "alias": "LEG",
+                    "display": true,
+                    "typeDescriptions": {
+                      "detailedImage": "https://ingresso-a.akamaihd.net/prd/img/copytype/"
+                    }
+                  }
+                ],
+                "date": {
+                  "localDate": "2026-08-29T20:50:00-03:00",
+                  "isToday": true,
+                  "dayOfWeek": "sábado",
+                  "dayAndMonth": "29/08",
+                  "hour": "20:50",
+                  "year": "2026"
+                },
+                "realDate": {
+                  "localDate": "2026-08-29T20:50:00-03:00",
+                  "isToday": true,
+                  "dayOfWeek": "sábado",
+                  "dayAndMonth": "29/08",
+                  "hour": "20:50",
+                  "year": "2026"
+                },
+                "time": "20:50",
+                "defaultSector": "4590743",
+                "midnightMessage": null,
+                "siteURL": "https://checkout.ingresso.com/?sessionId=86556281&partnership=home",
+                "nationalSiteURL": null,
+                "appCheckoutUrl": "",
+                "hasSeatSelection": true,
+                "driveIn": false,
+                "streaming": false,
+                "isNewCheckout": true,
+                "maxTicketsPerCar": 0,
+                "enabled": true,
+                "blockMessage": ""
+              }
+            ]
+          }
+        ],
+        "ratingDetails": {
+          "id": 2,
+          "name": "14 anos",
+          "label": "14",
+          "displayName": "14 anos",
+          "description": "Atos Criminosos, Conteúdo Sexual, Linguagem Imprópria, Temas Sensíveis, Violência, Estigma ou Preconceito.",
+          "color": "#F58220"
+        }
+      },
+      {
+        "id": "30814",
+        "b2BId": null,
+        "type": "Filme",
+        "title": "Mirrors No. 3",
+        "originalTitle": "Mirrors No. 3",
+        "movieIdUrl": "",
+        "inPreSale": false,
+        "isReexhibition": false,
+        "duration": "86",
+        "contentRating": "14 anos",
+        "distributor": "Imovision",
+        "urlKey": "mirrors-no-3",
+        "siteURL": "https://www.ingresso.com/filme/mirrors-no-3?city=sao-paulo&partnership=home",
+        "nationalSiteURL": "https://www.ingresso.com/filme/mirrors-no-3?city=sao-paulo&partnership=home",
+        "siteURLByTheater": "https://www.ingresso.com/filme/mirrors-no-3?city=sao-paulo&partnership=home#cinema=cinema-reserva-cultural-sao-paulo",
+        "nationalSiteURLByTheater": "https://www.ingresso.com/filme/mirrors-no-3?city=sao-paulo&partnership=home#cinema=cinema-reserva-cultural-sao-paulo",
+        "ancineId": "",
+        "images": [
+          {
+            "url": "https://ingresso-a.akamaihd.net/prd/img/movie/mirrors-no-3/6eb3b2dd-ccf6-4d5c-a24a-6bebdef0b487.webp",
+            "type": "PosterPortrait"
+          }
+        ],
+        "trailers": [
+          {
+            "type": "YouTube",
+            "url": "https://www.youtube.com/watch?v=cYeyeAh-zRw",
+            "embeddedUrl": "//www.youtube.com/embed/cYeyeAh-zRw"
+          }
+        ],
+        "genres": [
+          "Drama"
+        ],
+        "ratingDescriptors": [
+          "Drogas Lícitas",
+          "Linguagem Imprópria",
+          "Temas Sensíveis",
+          "Violência"
+        ],
+        "accessibilityHubs": [],
+        "tags": [],
+        "completeTags": [],
+        "rooms": null,
+        "sessionTypes": [
+          {
+            "type": [
+              "Laser",
+              "Legendado"
+            ],
+            "sessions": [
+              {
+                "id": "86556180",
+                "boxOfficeId": "7103058a-ee34-4716-9c94-2d50b6e097ee",
+                "eventBoxOfficeId": "1622",
+                "price": 54.72,
+                "room": "Sala 3",
+                "type": [
+                  "Laser",
+                  "Legendado"
+                ],
+                "types": [
+                  {
+                    "id": 1073741824,
+                    "name": "Laser",
+                    "alias": "Laser",
+                    "display": true,
+                    "typeDescriptions": {
+                      "detailedImage": "https://ingresso-a.akamaihd.net/prd/img/sessiontype/"
+                    }
+                  },
+                  {
+                    "id": 0,
+                    "name": "Legendado",
+                    "alias": "LEG",
+                    "display": true,
+                    "typeDescriptions": {
+                      "detailedImage": "https://ingresso-a.akamaihd.net/prd/img/copytype/"
+                    }
+                  }
+                ],
+                "date": {
+                  "localDate": "2026-08-29T18:20:00-03:00",
+                  "isToday": true,
+                  "dayOfWeek": "sábado",
+                  "dayAndMonth": "29/08",
+                  "hour": "18:20",
+                  "year": "2026"
+                },
+                "realDate": {
+                  "localDate": "2026-08-29T18:20:00-03:00",
+                  "isToday": true,
+                  "dayOfWeek": "sábado",
+                  "dayAndMonth": "29/08",
+                  "hour": "18:20",
+                  "year": "2026"
+                },
+                "time": "18:20",
+                "defaultSector": "4590742",
+                "midnightMessage": null,
+                "siteURL": "https://checkout.ingresso.com/?sessionId=86556180&partnership=home",
+                "nationalSiteURL": null,
+                "appCheckoutUrl": "",
+                "hasSeatSelection": true,
+                "driveIn": false,
+                "streaming": false,
+                "isNewCheckout": true,
+                "maxTicketsPerCar": 0,
+                "enabled": true,
+                "blockMessage": ""
+              }
+            ]
+          }
+        ],
+        "ratingDetails": {
+          "id": 2,
+          "name": "14 anos",
+          "label": "14",
+          "displayName": "14 anos",
+          "description": "Atos Criminosos, Conteúdo Sexual, Linguagem Imprópria, Temas Sensíveis, Violência, Estigma ou Preconceito.",
+          "color": "#F58220"
+        }
+      },
+      {
+        "id": "31307",
+        "b2BId": null,
+        "type": "Filme",
+        "title": "O Convite",
+        "originalTitle": "The Invite",
+        "movieIdUrl": "https://movieid.com/oconvite",
+        "inPreSale": false,
+        "isReexhibition": false,
+        "duration": "107",
+        "contentRating": "16 anos",
+        "distributor": "O2 Play",
+        "urlKey": "o-convite",
+        "siteURL": "https://www.ingresso.com/filme/o-convite?city=sao-paulo&partnership=home",
+        "nationalSiteURL": "https://www.ingresso.com/filme/o-convite?city=sao-paulo&partnership=home",
+        "siteURLByTheater": "https://www.ingresso.com/filme/o-convite?city=sao-paulo&partnership=home#cinema=cinema-reserva-cultural-sao-paulo",
+        "nationalSiteURLByTheater": "https://www.ingresso.com/filme/o-convite?city=sao-paulo&partnership=home#cinema=cinema-reserva-cultural-sao-paulo",
+        "ancineId": "",
+        "images": [
+          {
+            "url": "https://ingresso-a.akamaihd.net/prd/img/movie/o-convite/3a995167-285e-4446-9504-b0a808fe5336.webp",
+            "type": "PosterPortrait"
+          },
+          {
+            "url": "https://ingresso-a.akamaihd.net/prd/img/movie/o-convite/ae7c1a37-c931-4350-b5dc-1e53892ae331.webp",
+            "type": "PosterHorizontal"
+          }
+        ],
+        "trailers": [
+          {
+            "type": "YouTube",
+            "url": "https://www.youtube.com/watch?v=4A7-5fr8V_w",
+            "embeddedUrl": "//www.youtube.com/embed/4A7-5fr8V_w"
+          },
+          {
+            "type": "YouTube",
+            "url": "https://www.youtube.com/watch?v=3-AlcX7TdjY",
+            "embeddedUrl": "//www.youtube.com/embed/3-AlcX7TdjY"
+          }
+        ],
+        "genres": [
+          "Comédia",
+          "Drama",
+          "Romance"
+        ],
+        "ratingDescriptors": [
+          "Conteúdo Sexual",
+          "Drogas",
+          "Linguagem Imprópria",
+          "Temas Sensíveis"
+        ],
+        "accessibilityHubs": [],
+        "tags": [],
+        "completeTags": [],
+        "rooms": null,
+        "sessionTypes": [
+          {
+            "type": [
+              "Laser",
+              "Legendado"
+            ],
+            "sessions": [
+              {
+                "id": "86557587",
+                "boxOfficeId": "03770627-0ce2-4d79-b2a5-c63373d5de31",
+                "eventBoxOfficeId": "1747",
+                "price": 54.72,
+                "room": "Sala 2",
+                "type": [
+                  "Laser",
+                  "Legendado"
+                ],
+                "types": [
+                  {
+                    "id": 1073741824,
+                    "name": "Laser",
+                    "alias": "Laser",
+                    "display": true,
+                    "typeDescriptions": {
+                      "detailedImage": "https://ingresso-a.akamaihd.net/prd/img/sessiontype/"
+                    }
+                  },
+                  {
+                    "id": 0,
+                    "name": "Legendado",
+                    "alias": "LEG",
+                    "display": true,
+                    "typeDescriptions": {
+                      "detailedImage": "https://ingresso-a.akamaihd.net/prd/img/copytype/"
+                    }
+                  }
+                ],
+                "date": {
+                  "localDate": "2026-08-29T18:40:00-03:00",
+                  "isToday": true,
+                  "dayOfWeek": "sábado",
+                  "dayAndMonth": "29/08",
+                  "hour": "18:40",
+                  "year": "2026"
+                },
+                "realDate": {
+                  "localDate": "2026-08-29T18:40:00-03:00",
+                  "isToday": true,
+                  "dayOfWeek": "sábado",
+                  "dayAndMonth": "29/08",
+                  "hour": "18:40",
+                  "year": "2026"
+                },
+                "time": "18:40",
+                "defaultSector": "4590380",
+                "midnightMessage": null,
+                "siteURL": "https://checkout.ingresso.com/?sessionId=86557587&partnership=home",
+                "nationalSiteURL": null,
+                "appCheckoutUrl": "",
+                "hasSeatSelection": true,
+                "driveIn": false,
+                "streaming": false,
+                "isNewCheckout": true,
+                "maxTicketsPerCar": 0,
+                "enabled": true,
+                "blockMessage": ""
+              },
+              {
+                "id": "86556137",
+                "boxOfficeId": "55956648-9cb8-4cbd-9101-ac12f840f73e",
+                "eventBoxOfficeId": "1747",
+                "price": 54.72,
+                "room": "Sala 2",
+                "type": [
+                  "Laser",
+                  "Legendado"
+                ],
+                "types": [
+                  {
+                    "id": 1073741824,
+                    "name": "Laser",
+                    "alias": "Laser",
+                    "display": true,
+                    "typeDescriptions": {
+                      "detailedImage": "https://ingresso-a.akamaihd.net/prd/img/sessiontype/"
+                    }
+                  },
+                  {
+                    "id": 0,
+                    "name": "Legendado",
+                    "alias": "LEG",
+                    "display": true,
+                    "typeDescriptions": {
+                      "detailedImage": "https://ingresso-a.akamaihd.net/prd/img/copytype/"
+                    }
+                  }
+                ],
+                "date": {
+                  "localDate": "2026-08-29T21:00:00-03:00",
+                  "isToday": true,
+                  "dayOfWeek": "sábado",
+                  "dayAndMonth": "29/08",
+                  "hour": "21:00",
+                  "year": "2026"
+                },
+                "realDate": {
+                  "localDate": "2026-08-29T21:00:00-03:00",
+                  "isToday": true,
+                  "dayOfWeek": "sábado",
+                  "dayAndMonth": "29/08",
+                  "hour": "21:00",
+                  "year": "2026"
+                },
+                "time": "21:00",
+                "defaultSector": "4590380",
+                "midnightMessage": null,
+                "siteURL": "https://checkout.ingresso.com/?sessionId=86556137&partnership=home",
+                "nationalSiteURL": null,
+                "appCheckoutUrl": "",
+                "hasSeatSelection": true,
+                "driveIn": false,
+                "streaming": false,
+                "isNewCheckout": true,
+                "maxTicketsPerCar": 0,
+                "enabled": true,
+                "blockMessage": ""
+              }
+            ]
+          }
+        ],
+        "ratingDetails": {
+          "id": 4,
+          "name": "16 anos",
+          "label": "16",
+          "displayName": "16 anos",
+          "description": "Atos Criminosos, Conteúdo Sexual, Linguagem Imprópria, Nudez, Temas Sensíveis, Violência.",
+          "color": "#EC1D25"
+        }
+      },
+      {
+        "id": "32844",
+        "b2BId": null,
+        "type": "Filme",
+        "title": "Refém Por Um Fio",
+        "originalTitle": "Dead Man's Wire",
+        "movieIdUrl": "",
+        "inPreSale": false,
+        "isReexhibition": false,
+        "duration": "104",
+        "contentRating": "14 anos",
+        "distributor": "Pandora Filmes",
+        "urlKey": "refem-por-um-fio",
+        "siteURL": "https://www.ingresso.com/filme/refem-por-um-fio?city=sao-paulo&partnership=home",
+        "nationalSiteURL": "https://www.ingresso.com/filme/refem-por-um-fio?city=sao-paulo&partnership=home",
+        "siteURLByTheater": "https://www.ingresso.com/filme/refem-por-um-fio?city=sao-paulo&partnership=home#cinema=cinema-reserva-cultural-sao-paulo",
+        "nationalSiteURLByTheater": "https://www.ingresso.com/filme/refem-por-um-fio?city=sao-paulo&partnership=home#cinema=cinema-reserva-cultural-sao-paulo",
+        "ancineId": "",
+        "images": [
+          {
+            "url": "https://ingresso-a.akamaihd.net/prd/img/movie/refem-por-um-fio/22831fde-939c-42a5-ab5c-d45572f110ef.webp",
+            "type": "PosterPortrait"
+          }
+        ],
+        "trailers": [
+          {
+            "type": "YouTube",
+            "url": "https://www.youtube.com/watch?v=i-2aqieMubQ",
+            "embeddedUrl": "//www.youtube.com/embed/i-2aqieMubQ"
+          }
+        ],
+        "genres": [
+          "Suspense"
+        ],
+        "ratingDescriptors": [
+          "Drogas Lícitas",
+          "Linguagem Imprópria",
+          "Violência"
+        ],
+        "accessibilityHubs": [],
+        "tags": [],
+        "completeTags": [],
+        "rooms": null,
+        "sessionTypes": [
+          {
+            "type": [
+              "Laser",
+              "Legendado"
+            ],
+            "sessions": [
+              {
+                "id": "86555868",
+                "boxOfficeId": "3ff70027-8353-4209-95ff-c75e432da24a",
+                "eventBoxOfficeId": "1783",
+                "price": 54.72,
+                "room": "Sala 3",
+                "type": [
+                  "Laser",
+                  "Legendado"
+                ],
+                "types": [
+                  {
+                    "id": 1073741824,
+                    "name": "Laser",
+                    "alias": "Laser",
+                    "display": true,
+                    "typeDescriptions": {
+                      "detailedImage": "https://ingresso-a.akamaihd.net/prd/img/sessiontype/"
+                    }
+                  },
+                  {
+                    "id": 0,
+                    "name": "Legendado",
+                    "alias": "LEG",
+                    "display": true,
+                    "typeDescriptions": {
+                      "detailedImage": "https://ingresso-a.akamaihd.net/prd/img/copytype/"
+                    }
+                  }
+                ],
+                "date": {
+                  "localDate": "2026-08-29T16:10:00-03:00",
+                  "isToday": true,
+                  "dayOfWeek": "sábado",
+                  "dayAndMonth": "29/08",
+                  "hour": "16:10",
+                  "year": "2026"
+                },
+                "realDate": {
+                  "localDate": "2026-08-29T16:10:00-03:00",
+                  "isToday": true,
+                  "dayOfWeek": "sábado",
+                  "dayAndMonth": "29/08",
+                  "hour": "16:10",
+                  "year": "2026"
+                },
+                "time": "16:10",
+                "defaultSector": "4590742",
+                "midnightMessage": null,
+                "siteURL": "https://checkout.ingresso.com/?sessionId=86555868&partnership=home",
+                "nationalSiteURL": null,
+                "appCheckoutUrl": "",
+                "hasSeatSelection": true,
+                "driveIn": false,
+                "streaming": false,
+                "isNewCheckout": true,
+                "maxTicketsPerCar": 0,
+                "enabled": true,
+                "blockMessage": ""
+              }
+            ]
+          }
+        ],
+        "ratingDetails": {
+          "id": 2,
+          "name": "14 anos",
+          "label": "14",
+          "displayName": "14 anos",
+          "description": "Atos Criminosos, Conteúdo Sexual, Linguagem Imprópria, Temas Sensíveis, Violência, Estigma ou Preconceito.",
+          "color": "#F58220"
+        }
+      },
+      {
+        "id": "32971",
+        "b2BId": null,
+        "type": "Filme",
+        "title": "Muito Prazer",
+        "originalTitle": "Muito Prazer",
+        "movieIdUrl": "",
+        "inPreSale": false,
+        "isReexhibition": false,
+        "duration": "98",
+        "contentRating": "14 anos",
+        "distributor": "Elo Studios",
+        "urlKey": "muito-prazer",
+        "siteURL": "https://www.ingresso.com/filme/muito-prazer?city=sao-paulo&partnership=home",
+        "nationalSiteURL": "https://www.ingresso.com/filme/muito-prazer?city=sao-paulo&partnership=home",
+        "siteURLByTheater": "https://www.ingresso.com/filme/muito-prazer?city=sao-paulo&partnership=home#cinema=cinema-reserva-cultural-sao-paulo",
+        "nationalSiteURLByTheater": "https://www.ingresso.com/filme/muito-prazer?city=sao-paulo&partnership=home#cinema=cinema-reserva-cultural-sao-paulo",
+        "ancineId": "",
+        "images": [
+          {
+            "url": "https://ingresso-a.akamaihd.net/prd/img/movie/muito-prazer/b3a6b0ad-0886-46fc-8dd5-79cd427d3245.webp",
+            "type": "PosterPortrait"
+          }
+        ],
+        "trailers": [
+          {
+            "type": "YouTube",
+            "url": "https://www.youtube.com/watch?v=4y7i1Uai9IA",
+            "embeddedUrl": "//www.youtube.com/embed/4y7i1Uai9IA"
+          },
+          {
+            "type": "YouTube",
+            "url": "https://www.youtube.com/watch?v=mwSPrqqzFig",
+            "embeddedUrl": "//www.youtube.com/embed/mwSPrqqzFig"
+          }
+        ],
+        "genres": [
+          "Comédia"
+        ],
+        "ratingDescriptors": [
+          "Atos Criminosos",
+          "Conteúdo Sexual",
+          "Drogas Lícitas",
+          "Linguagem Imprópria"
+        ],
+        "accessibilityHubs": [],
+        "tags": [],
+        "completeTags": [],
+        "rooms": null,
+        "sessionTypes": [
+          {
+            "type": [
+              "Laser",
+              "Nacional"
+            ],
+            "sessions": [
+              {
+                "id": "86557683",
+                "boxOfficeId": "77f84edd-9622-4d92-a238-600693fdf5e7",
+                "eventBoxOfficeId": "1793",
+                "price": 54.72,
+                "room": "Sala 4",
+                "type": [
+                  "Laser",
+                  "Nacional"
+                ],
+                "types": [
+                  {
+                    "id": 1073741824,
+                    "name": "Laser",
+                    "alias": "Laser",
+                    "display": true,
+                    "typeDescriptions": {
+                      "detailedImage": "https://ingresso-a.akamaihd.net/prd/img/sessiontype/"
+                    }
+                  },
+                  {
+                    "id": 0,
+                    "name": "Nacional",
+                    "alias": "NAC",
+                    "display": true,
+                    "typeDescriptions": {
+                      "detailedImage": "https://ingresso-a.akamaihd.net/prd/img/copytype/"
+                    }
+                  }
+                ],
+                "date": {
+                  "localDate": "2026-08-29T17:00:00-03:00",
+                  "isToday": true,
+                  "dayOfWeek": "sábado",
+                  "dayAndMonth": "29/08",
+                  "hour": "17:00",
+                  "year": "2026"
+                },
+                "realDate": {
+                  "localDate": "2026-08-29T17:00:00-03:00",
+                  "isToday": true,
+                  "dayOfWeek": "sábado",
+                  "dayAndMonth": "29/08",
+                  "hour": "17:00",
+                  "year": "2026"
+                },
+                "time": "17:00",
+                "defaultSector": "4590734",
+                "midnightMessage": null,
+                "siteURL": "https://checkout.ingresso.com/?sessionId=86557683&partnership=home",
+                "nationalSiteURL": null,
+                "appCheckoutUrl": "",
+                "hasSeatSelection": true,
+                "driveIn": false,
+                "streaming": false,
+                "isNewCheckout": true,
+                "maxTicketsPerCar": 0,
+                "enabled": true,
+                "blockMessage": ""
+              },
+              {
+                "id": "86556793",
+                "boxOfficeId": "b7c7023a-bedd-423e-ae21-bdbf4f21f3b4",
+                "eventBoxOfficeId": "1793",
+                "price": 54.72,
+                "room": "Sala 4",
+                "type": [
+                  "Laser",
+                  "Nacional"
+                ],
+                "types": [
+                  {
+                    "id": 1073741824,
+                    "name": "Laser",
+                    "alias": "Laser",
+                    "display": true,
+                    "typeDescriptions": {
+                      "detailedImage": "https://ingresso-a.akamaihd.net/prd/img/sessiontype/"
+                    }
+                  },
+                  {
+                    "id": 0,
+                    "name": "Nacional",
+                    "alias": "NAC",
+                    "display": true,
+                    "typeDescriptions": {
+                      "detailedImage": "https://ingresso-a.akamaihd.net/prd/img/copytype/"
+                    }
+                  }
+                ],
+                "date": {
+                  "localDate": "2026-08-29T19:00:00-03:00",
+                  "isToday": true,
+                  "dayOfWeek": "sábado",
+                  "dayAndMonth": "29/08",
+                  "hour": "19:00",
+                  "year": "2026"
+                },
+                "realDate": {
+                  "localDate": "2026-08-29T19:00:00-03:00",
+                  "isToday": true,
+                  "dayOfWeek": "sábado",
+                  "dayAndMonth": "29/08",
+                  "hour": "19:00",
+                  "year": "2026"
+                },
+                "time": "19:00",
+                "defaultSector": "4590734",
+                "midnightMessage": null,
+                "siteURL": "https://checkout.ingresso.com/?sessionId=86556793&partnership=home",
+                "nationalSiteURL": null,
+                "appCheckoutUrl": "",
+                "hasSeatSelection": true,
+                "driveIn": false,
+                "streaming": false,
+                "isNewCheckout": true,
+                "maxTicketsPerCar": 0,
+                "enabled": true,
+                "blockMessage": ""
+              }
+            ]
+          }
+        ],
+        "ratingDetails": {
+          "id": 2,
+          "name": "14 anos",
+          "label": "14",
+          "displayName": "14 anos",
+          "description": "Atos Criminosos, Conteúdo Sexual, Linguagem Imprópria, Temas Sensíveis, Violência, Estigma ou Preconceito.",
+          "color": "#F58220"
+        }
+      },
+      {
+        "id": "33012",
+        "b2BId": null,
+        "type": "Filme",
+        "title": "Akira (Remasterizado Em 4k)",
+        "originalTitle": "Akira",
+        "movieIdUrl": "https://movieid.com/akira",
+        "inPreSale": false,
+        "isReexhibition": false,
+        "duration": "124",
+        "contentRating": "14 anos",
+        "distributor": "Sato Company",
+        "urlKey": "akira-remasterizado-em-4k",
+        "siteURL": "https://www.ingresso.com/filme/akira-remasterizado-em-4k?city=sao-paulo&partnership=home",
+        "nationalSiteURL": "https://www.ingresso.com/filme/akira-remasterizado-em-4k?city=sao-paulo&partnership=home",
+        "siteURLByTheater": "https://www.ingresso.com/filme/akira-remasterizado-em-4k?city=sao-paulo&partnership=home#cinema=cinema-reserva-cultural-sao-paulo",
+        "nationalSiteURLByTheater": "https://www.ingresso.com/filme/akira-remasterizado-em-4k?city=sao-paulo&partnership=home#cinema=cinema-reserva-cultural-sao-paulo",
+        "ancineId": "",
+        "images": [
+          {
+            "url": "https://ingresso-a.akamaihd.net/prd/img/movie/akira-remasterizado-em-4k/04fb68ec-e1fd-42f5-92b2-a3762b4f20b0.webp",
+            "type": "PosterPortrait"
+          },
+          {
+            "url": "https://ingresso-a.akamaihd.net/prd/img/movie/akira-remasterizado-em-4k/41a0ffbc-5bea-4138-82e5-fb245a72e414.webp",
+            "type": "PosterHorizontal"
+          }
+        ],
+        "trailers": [
+          {
+            "type": "YouTube",
+            "url": "https://www.youtube.com/watch?v=3IB6pHU8f5E",
+            "embeddedUrl": "//www.youtube.com/embed/3IB6pHU8f5E"
+          }
+        ],
+        "genres": [
+          "Ação",
+          "Animê",
+          "Drama"
+        ],
+        "ratingDescriptors": [
+          "Nudez",
+          "Violência",
+          "Violência Extrema"
+        ],
+        "accessibilityHubs": [],
+        "tags": [],
+        "completeTags": [],
+        "rooms": null,
+        "sessionTypes": [
+          {
+            "type": [
+              "Laser",
+              "Legendado"
+            ],
+            "sessions": [
+              {
+                "id": "86556503",
+                "boxOfficeId": "704e084d-f6b5-4c99-9ebf-adb823fbdb66",
+                "eventBoxOfficeId": "1791",
+                "price": 54.72,
+                "room": "Sala 4",
+                "type": [
+                  "Laser",
+                  "Legendado"
+                ],
+                "types": [
+                  {
+                    "id": 1073741824,
+                    "name": "Laser",
+                    "alias": "Laser",
+                    "display": true,
+                    "typeDescriptions": {
+                      "detailedImage": "https://ingresso-a.akamaihd.net/prd/img/sessiontype/"
+                    }
+                  },
+                  {
+                    "id": 0,
+                    "name": "Legendado",
+                    "alias": "LEG",
+                    "display": true,
+                    "typeDescriptions": {
+                      "detailedImage": "https://ingresso-a.akamaihd.net/prd/img/copytype/"
+                    }
+                  }
+                ],
+                "date": {
+                  "localDate": "2026-08-29T21:00:00-03:00",
+                  "isToday": true,
+                  "dayOfWeek": "sábado",
+                  "dayAndMonth": "29/08",
+                  "hour": "21:00",
+                  "year": "2026"
+                },
+                "realDate": {
+                  "localDate": "2026-08-29T21:00:00-03:00",
+                  "isToday": true,
+                  "dayOfWeek": "sábado",
+                  "dayAndMonth": "29/08",
+                  "hour": "21:00",
+                  "year": "2026"
+                },
+                "time": "21:00",
+                "defaultSector": "4590734",
+                "midnightMessage": null,
+                "siteURL": "https://checkout.ingresso.com/?sessionId=86556503&partnership=home",
+                "nationalSiteURL": null,
+                "appCheckoutUrl": "",
+                "hasSeatSelection": true,
+                "driveIn": false,
+                "streaming": false,
+                "isNewCheckout": true,
+                "maxTicketsPerCar": 0,
+                "enabled": true,
+                "blockMessage": ""
+              }
+            ]
+          }
+        ],
+        "ratingDetails": {
+          "id": 2,
+          "name": "14 anos",
+          "label": "14",
+          "displayName": "14 anos",
+          "description": "Atos Criminosos, Conteúdo Sexual, Linguagem Imprópria, Temas Sensíveis, Violência, Estigma ou Preconceito.",
+          "color": "#F58220"
+        }
+      },
+      {
+        "id": "33396",
+        "b2BId": null,
+        "type": "Filme",
+        "title": "La La Land - Cantando Estações (Relançamento)",
+        "originalTitle": "La La Land",
+        "movieIdUrl": "",
+        "inPreSale": false,
+        "isReexhibition": false,
+        "duration": "128",
+        "contentRating": "10 anos",
+        "distributor": "Paris Filmes",
+        "urlKey": "la-la-land-cantando-estacoes-relancamento",
+        "siteURL": "https://www.ingresso.com/filme/la-la-land-cantando-estacoes-relancamento?city=sao-paulo&partnership=home",
+        "nationalSiteURL": "https://www.ingresso.com/filme/la-la-land-cantando-estacoes-relancamento?city=sao-paulo&partnership=home",
+        "siteURLByTheater": "https://www.ingresso.com/filme/la-la-land-cantando-estacoes-relancamento?city=sao-paulo&partnership=home#cinema=cinema-reserva-cultural-sao-paulo",
+        "nationalSiteURLByTheater": "https://www.ingresso.com/filme/la-la-land-cantando-estacoes-relancamento?city=sao-paulo&partnership=home#cinema=cinema-reserva-cultural-sao-paulo",
+        "ancineId": "",
+        "images": [
+          {
+            "url": "https://ingresso-a.akamaihd.net/prd/img/movie/la-la-land-cantando-estacoes-relancamento/6bfab609-ec4f-4610-afb6-aac8e22d92aa.webp",
+            "type": "PosterPortrait"
+          },
+          {
+            "url": "https://ingresso-a.akamaihd.net/prd/img/movie/la-la-land-cantando-estacoes-relancamento/88480196-90aa-44f2-8de9-0bc0cd22b1d6.webp",
+            "type": "PosterHorizontal"
+          }
+        ],
+        "trailers": [
+          {
+            "type": "YouTube",
+            "url": "https://www.youtube.com/watch?v=hAEBzgxBkaQ",
+            "embeddedUrl": "//www.youtube.com/embed/hAEBzgxBkaQ"
+          }
+        ],
+        "genres": [
+          "Musical",
+          "Romance"
+        ],
+        "ratingDescriptors": [
+          "Drogas Lícitas"
+        ],
+        "accessibilityHubs": [],
+        "tags": [],
+        "completeTags": [],
+        "rooms": null,
+        "sessionTypes": [
+          {
+            "type": [
+              "Laser",
+              "Legendado"
+            ],
+            "sessions": [
+              {
+                "id": "86557303",
+                "boxOfficeId": "63310c6f-da7c-4f98-80d3-d5acc9dfd393",
+                "eventBoxOfficeId": "1785",
+                "price": 54.72,
+                "room": "Sala 2",
+                "type": [
+                  "Laser",
+                  "Legendado"
+                ],
+                "types": [
+                  {
+                    "id": 1073741824,
+                    "name": "Laser",
+                    "alias": "Laser",
+                    "display": true,
+                    "typeDescriptions": {
+                      "detailedImage": "https://ingresso-a.akamaihd.net/prd/img/sessiontype/"
+                    }
+                  },
+                  {
+                    "id": 0,
+                    "name": "Legendado",
+                    "alias": "LEG",
+                    "display": true,
+                    "typeDescriptions": {
+                      "detailedImage": "https://ingresso-a.akamaihd.net/prd/img/copytype/"
+                    }
+                  }
+                ],
+                "date": {
+                  "localDate": "2026-08-29T16:00:00-03:00",
+                  "isToday": true,
+                  "dayOfWeek": "sábado",
+                  "dayAndMonth": "29/08",
+                  "hour": "16:00",
+                  "year": "2026"
+                },
+                "realDate": {
+                  "localDate": "2026-08-29T16:00:00-03:00",
+                  "isToday": true,
+                  "dayOfWeek": "sábado",
+                  "dayAndMonth": "29/08",
+                  "hour": "16:00",
+                  "year": "2026"
+                },
+                "time": "16:00",
+                "defaultSector": "4590380",
+                "midnightMessage": null,
+                "siteURL": "https://checkout.ingresso.com/?sessionId=86557303&partnership=home",
+                "nationalSiteURL": null,
+                "appCheckoutUrl": "",
+                "hasSeatSelection": true,
+                "driveIn": false,
+                "streaming": false,
+                "isNewCheckout": true,
+                "maxTicketsPerCar": 0,
+                "enabled": true,
+                "blockMessage": ""
+              }
+            ]
+          }
+        ],
+        "ratingDetails": {
+          "id": 29,
+          "name": "10 anos",
+          "label": "10",
+          "displayName": "10 anos",
+          "description": "Temas Sensíveis, Violência.",
+          "color": "#0095DA"
+        }
+      }
+    ]
+  }
+]

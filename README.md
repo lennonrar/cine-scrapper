@@ -2,6 +2,19 @@
 
 A movie schedule scraper that collects information from various cinema venues and provides movie schedules with TMDB ratings.
 
+## Sources
+
+- Cinemateca
+- Belas Artes
+- Cinema Augusta
+- IMS Paulista
+- Reserva Cultural (São Paulo)
+
+A film playing at more than one venue on the same day is now shown once
+per venue instead of once overall — the dedupe key is `(name, local)`,
+not just `name`, so a title at both Belas Artes and Reserva Cultural
+prints twice.
+
 ## Prerequisites
 
 - Docker and Docker Compose
