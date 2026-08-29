@@ -52,7 +52,13 @@ Example:
 python main.py 2025-10-19
 ```
 
-You can also pass a day of month like `1` or `10`, which uses the current month and year, or a month-day value like `07-01`, which uses the current year.
+You can also pass a bare day of month like `1` or `10`. This resolves to the
+**next** time that day comes around: the current month if the day has not passed
+yet, otherwise the following month. Running `python main.py 1` on August 28th
+searches September 1st, not the August 1st already behind you. December rolls
+into the next year.
+
+A month-day value like `07-01` uses the current year and is not rolled forward.
 
 ### Show Only High-Rated Movies:
 Add the `--boring` flag to show only movies with TMDB ratings above 7.0:

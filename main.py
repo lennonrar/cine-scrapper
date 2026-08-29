@@ -20,6 +20,17 @@ MOVIES_TTL = 18 * 3600  # 64800 seconds
 TODAY = get_today()
 
 
+def resolve_day_of_month(day: int, today: date) -> str:
+    """A bare day number means the next time that day comes around: this
+    month if it has not passed yet, next month if it has."""
+    year, month = today.year, today.month
+
+    if day < today.day:
+        year, month = (year + 1, 1) if month == 12 else (year, month + 1)
+
+    return f"{year}-{month:02d}-{day:02d}"
+
+
 def normalize_date_input(date_input: Optional[str]) -> str:
     if not date_input:
         return TODAY
@@ -33,7 +44,7 @@ def normalize_date_input(date_input: Optional[str]) -> str:
         return f"{date.today().year}-{normalized_input}"
 
     if re.fullmatch(r"\d{1,2}", normalized_input):
-        return f"{date.today().year}-{date.today().month:02d}-{int(normalized_input):02d}"
+        return resolve_day_of_month(int(normalized_input), date.today())
 
     return normalized_input
 
