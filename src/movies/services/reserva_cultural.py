@@ -82,6 +82,7 @@ def get_movies_reserva_cultural(
                     # ticket_url left disabled per D3, matching
                     # velox_tickets.py / ims.py.
                     # ticket_url=session.get("siteURL"),
+                    original_title=raw_movie.get("originalTitle"),
                 )
             )
 

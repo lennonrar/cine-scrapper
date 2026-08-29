@@ -13,18 +13,25 @@ class Movie:
             duration: Optional[str] = None,
             cached: bool = False,
             tmdb_url: Optional[str] = None,
-            ticket_url: Optional[str] = None
+            ticket_url: Optional[str] = None,
+            original_title: Optional[str] = None
             ):
         self.name = name
         self.local = local
         self.time = time
         self.duration = duration
         self.ticket_url = ticket_url
+        self.original_title = original_title
         self.tmdb_url = tmdb_url
         self.tmdb_score = tmdb_score
         if self.tmdb_score is None and not cached:
+            # TMDB indexes by original title, so a Portuguese release
+            # title can miss entirely: "A Odisseia" returns 36 results
+            # topped by an unrelated 0-vote film, while "The Odyssey"
+            # returns the right one. Sources that carry the original
+            # title win; the rest keep searching by name as before.
             self.tmdb_score, self.tmdb_url = get_tmdb_details(
-                self._sanitize_moviename(name)
+                self._sanitize_moviename(original_title or name)
             )
         self.min_score = 7
 
@@ -62,6 +69,7 @@ class Movie:
             'local': self.local,
             'time': self.time,
             'duration': self.duration,
+            'original_title': self.original_title,
             'tmdb_score': self.tmdb_score,
             'tmdb_url': self.tmdb_url,
             'ticket_url': self.ticket_url,

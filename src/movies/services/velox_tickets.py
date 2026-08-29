@@ -54,6 +54,7 @@ def _get_movies_from_url(
                 rooms[0].get("roomName"),
                 rooms[0].get("schedules")[0].get("startTime"),
                 # ticket_url=ticket_url,
+                original_title=event.get("originalTitle"),
             )
         )
 
