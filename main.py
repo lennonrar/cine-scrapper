@@ -8,6 +8,9 @@ from src.init import init_redis
 from src.movies.movies import Movie
 from src.movies.services.cinemateca import get_movies_cinemateca
 from src.movies.services.ims import get_movies_ims
+from src.movies.services.reserva_cultural import (
+    get_movies_reserva_cultural,
+)
 from src.movies.services.velox_tickets import (
     get_movies_belasartes,
     get_movies_cinema_augusta,
@@ -53,6 +56,7 @@ def main(
         movies.extend(get_movies_belasartes(date2search))
         movies.extend(get_movies_cinema_augusta(date2search))
         movies.extend(get_movies_ims(date2search))
+        movies.extend(get_movies_reserva_cultural(date2search))
 
         hash_obj = {
             "movies": json.dumps(
@@ -74,8 +78,13 @@ def main(
 
     print("*" * 20)
 
+    # D5: key includes local so the same film at two venues shows
+    # twice instead of one venue's row silently dropping the other's.
     movies = list(
-        {movie.name.lower(): movie for movie in movies}.values()
+        {
+            (movie.name.lower(), movie.local): movie
+            for movie in movies
+        }.values()
     )
     movies = sorted(movies, key=lambda x: (x.time or 0), reverse=False)
 

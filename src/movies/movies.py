@@ -1,3 +1,4 @@
+import re
 from typing import Optional
 
 from src.tmdb.tmdb_service import get_tmdb_details
@@ -42,7 +43,7 @@ class Movie:
     def __str__(self):
         score = self.tmdb_score if self.tmdb_score else 'N/A'
         base = (
-            f"{self.name:<50} | {self.time:<8} | {self.local:<50} | "
+            f"{self.name:<50} | {self.time:<20} | {self.local:<50} | "
             f"TMDB Score: {score:<5}"
         )
         links = []
@@ -71,7 +72,13 @@ class Movie:
         if 'Ciência no Cinema' in moviename:
             return moviename.split(':')[-1]
 
-        return moviename
+        # T8: a trailing release-status tag like "(Relançamento)" or
+        # "(Remasterizado Em 4k)" defeats TMDB's title search entirely
+        # (0 results), not just its ranking. Stripping it is safe -
+        # the tag is never part of the actual title.
+        without_tag = re.sub(r'\s*\([^)]*\)\s*$', '', moviename).strip()
+
+        return without_tag or moviename
 
     def meets_score_threshold(self) -> bool:
         """Check if movie meets minimum score threshold"""

@@ -281,3 +281,45 @@ One commit on `feat/reserva-cultural`. Do not push; do not open a PR.
 3. Nothing from §4 in the diff.
 4. D1–D5 recorded in §3 with the values actually built.
 5. This file updated to say what was built, including any deviation.
+
+---
+
+## 9. Execution record (2026-08-29)
+
+T0–T11 executed as ordered. Built exactly as D1–D5 specify:
+`src/movies/services/reserva_cultural.py` added; `local` is
+`"Reserva Cultural - Sala N"` (D1); grouping key `(title, room)` (D2);
+`ticket_url` wired but commented out (D3); `duration` left unset (D4);
+`main.py`'s dedupe key changed to `(name.lower(), local)` (D5).
+
+**One deviation, inside T8's stated latitude.** T8 says a systematic
+TMDB miss is "either fixed in `Movie._sanitize_moviename` or written
+up here as accepted." Both of the fixture's suffixed titles —
+`Akira (Remasterizado Em 4k)` and
+`La La Land - Cantando Estações (Relançamento)` — returned **zero**
+TMDB search results verbatim (confirmed live), while the same query
+minus the trailing parenthetical matched correctly. `_sanitize_moviename`
+now strips a trailing `(...)` annotation for every title, not only
+Reserva Cultural's:
+
+```python
+without_tag = re.sub(r'\s*\([^)]*\)\s*$', '', moviename).strip()
+return without_tag or moviename
+```
+
+This also fixed a pre-existing miss on `Akira (relançamento)` /
+`A Professora de Piano (Relançamento)` from the other sources (both
+went from `N/A` to a resolved score) — an accepted side effect, not
+new scope, since the fix lives in the one shared function T8 named.
+Stale TMDB miss cache entries under the old (unstripped) key are
+orphaned, not deleted — they are simply never looked up again and
+expire on their existing 5-day TTL.
+
+`A Odisseia` (no parenthetical suffix) still returns no usable score:
+TMDB's top result for that exact string is an unrelated zero-vote
+title. This is a generic Portuguese-title-search ambiguity, not a
+suffix problem, and is accepted as out of scope per D4/§4's posture
+on title-matching quality.
+
+All other tasks (T0, T1, T3–T7, T9–T11) ran with no deviation from
+what §5 describes.
