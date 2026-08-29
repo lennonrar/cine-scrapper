@@ -25,11 +25,8 @@ class Movie:
         self.tmdb_url = tmdb_url
         self.tmdb_score = tmdb_score
         if self.tmdb_score is None and not cached:
-            # TMDB indexes by original title, so a Portuguese release
-            # title can miss entirely: "A Odisseia" returns 36 results
-            # topped by an unrelated 0-vote film, while "The Odyssey"
-            # returns the right one. Sources that carry the original
-            # title win; the rest keep searching by name as before.
+            # TMDB indexes by original title, so a Portuguese one can
+            # match the wrong film or none at all. Prefer it when known.
             self.tmdb_score, self.tmdb_url = get_tmdb_details(
                 self._sanitize_moviename(original_title or name)
             )
@@ -80,10 +77,8 @@ class Movie:
         if 'Ciência no Cinema' in moviename:
             return moviename.split(':')[-1]
 
-        # T8: a trailing release-status tag like "(Relançamento)" or
-        # "(Remasterizado Em 4k)" defeats TMDB's title search entirely
-        # (0 results), not just its ranking. Stripping it is safe -
-        # the tag is never part of the actual title.
+        # A trailing tag like "(Relançamento)" makes TMDB return zero
+        # results, so drop it before searching.
         without_tag = re.sub(r'\s*\([^)]*\)\s*$', '', moviename).strip()
 
         return without_tag or moviename

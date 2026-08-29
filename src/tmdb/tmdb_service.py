@@ -25,14 +25,14 @@ def _cache_read(
     try:
         entry = _cache.getHash(key)
     except RedisError:
-        return None                      # R1.6 - degrade to a live request
+        return None                      # degrade to a live request
     if not entry:
         return None
     try:
         raw_score = entry[b"score"].decode("utf-8")
         raw_url = entry[b"url"].decode("utf-8")
     except (KeyError, AttributeError, UnicodeDecodeError):
-        return None                      # R1.6 - malformed entry
+        return None                      # malformed entry
     try:
         score = float(raw_score) if raw_score else None
     except ValueError:

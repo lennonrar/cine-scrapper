@@ -78,8 +78,8 @@ def main(
 
     print("*" * 20)
 
-    # D5: key includes local so the same film at two venues shows
-    # twice instead of one venue's row silently dropping the other's.
+    # Key on local as well, so the same film at two venues keeps
+    # a row for each.
     movies = list(
         {
             (movie.name.lower(), movie.local): movie
