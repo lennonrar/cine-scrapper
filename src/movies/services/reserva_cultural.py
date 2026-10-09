@@ -2,6 +2,7 @@ from typing import List, Optional
 
 from requests import RequestException
 from src.movies.movies import Movie
+from src.movies.services.showtime_groups import build_grouped_movies
 from src.requests_service import get_data
 from src.utils import get_today
 
@@ -26,7 +27,6 @@ def get_movies_reserva_cultural(
         date2search: Optional[str] = get_today()
         ) -> List[Movie]:
     print("Fetching movies from Reserva Cultural...")
-    movies: List[Movie] = []
     url = URL.format(date2search)
     print(url)
     try:
@@ -34,44 +34,39 @@ def get_movies_reserva_cultural(
     except RequestException:
         # A date with no programming returns 204 and a bad date 400.
         # get_data raises on both, so neither is a real failure.
-        return movies
+        return []
 
     # The response is a list of days, one per date requested.
     if not response:
-        return movies
+        return []
     day = response[0] if isinstance(response, list) else None
     if not isinstance(day, dict):
-        return movies
+        return []
 
     raw_movies = day.get("movies") or []
     print(f"Found {len(raw_movies)} movies")
 
+    records = []
     for raw_movie in raw_movies:
         title = raw_movie.get("title")
         if not title:
             continue
         session_types = raw_movie.get("sessionTypes") or []
 
-        # One Movie per room, carrying that room's showtimes.
-        rooms: dict = {}
         for session_type in session_types:
             for session in session_type.get("sessions") or []:
                 room = session.get("room")
                 time = session.get("time")
                 if not room or not time:
                     continue
-                rooms.setdefault(room, []).append(time)
-
-        for room, times in rooms.items():
-            times.sort()
-            movies.append(
-                Movie(
-                    title,
-                    f"Reserva Cultural - {room}",
-                    ", ".join(times),
-                    # ticket_url=session.get("siteURL"),
-                    original_title=raw_movie.get("originalTitle"),
+                records.append(
+                    {
+                        "name": title,
+                        "local": f"Reserva Cultural - {room}",
+                        "time": time,
+                        # ticket_url=session.get("siteURL"),
+                        "original_title": raw_movie.get("originalTitle"),
+                    }
                 )
-            )
 
-    return movies
+    return build_grouped_movies(records)

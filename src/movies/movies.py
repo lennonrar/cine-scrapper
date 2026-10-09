@@ -47,7 +47,7 @@ class Movie:
     def __str__(self):
         score = self.tmdb_score if self.tmdb_score else 'N/A'
         base = (
-            f"{self.name:<50} | {self.time:<20} | {self.local:<50} | "
+            f"{self.name:<50} | {self.time:<30} | {self.local:<50} | "
             f"TMDB Score: {score:<5}"
         )
         links = []

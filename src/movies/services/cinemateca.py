@@ -1,5 +1,7 @@
 from typing import List, Optional
+
 from src.movies.movies import Movie
+from src.movies.services.showtime_groups import build_grouped_movies
 from src.requests_service import get_html_page
 from src.soup import get_soup
 from src.utils import get_today
@@ -9,10 +11,10 @@ def get_movies_cinemateca(
         date2search: Optional[str] = get_today()
         ) -> List[Movie]:
     print("Fetching movies from Cinemateca...")
-    movies: List[Movie] = []
     html_content = get_html_page("https://cinemateca.org.br/programacao/")
     soup = get_soup(html_content)
     today_movies = soup.find(id=f'tribe-events-calendar-day-{date2search}')
+    records = []
     if today_movies:
         today_events = today_movies.find_all(
             class_="tribe-events-calendar-month__calendar-event-details"
@@ -27,17 +29,27 @@ def get_movies_cinemateca(
                 class_="tribe-events-calendar-month__calendar-event-"
                        "tooltip-title-link"
             )
-            event_location = event.find('span', class_="deltec-location-name")
-            if event_title and event_location and event_datetime:
-                movie_name = event_title.get_text(strip=True)
-                movies.append(
-                    Movie(
-                        movie_name,
-                        event_location.get_text(strip=True),
-                        event_datetime.get_text(strip=True)
-                    )
-                )
+            event_location = event.find(
+                'span',
+                class_="deltec-location-name"
+            )
+            if not event_title:
+                continue
+            if not event_location:
+                continue
+            if not event_datetime:
+                continue
+
+            movie_name = event_title.get_text(strip=True)
+            movie_location = event_location.get_text(strip=True)
+            records.append(
+                {
+                    "name": movie_name,
+                    "local": movie_location,
+                    "time": event_datetime.get_text(strip=True),
+                }
+            )
     else:
         print("No movies found for today.")
 
-    return movies
+    return build_grouped_movies(records)

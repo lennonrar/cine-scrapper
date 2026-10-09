@@ -4,6 +4,7 @@ from zoneinfo import ZoneInfo
 
 from requests import RequestException
 from src.movies.movies import Movie
+from src.movies.services.showtime_groups import build_grouped_movies
 from src.requests_service import get_data
 from src.utils import get_today
 
@@ -25,36 +26,38 @@ def get_movies_ims(
         date2search: Optional[str] = get_today()
         ) -> List[Movie]:
     print("Fetching movies from IMS...")
-    movies: List[Movie] = []
     timestamp = _date_to_timestamp_ms(date2search)
     url = URL.format(timestamp=timestamp)
     print(url)
     try:
         response = get_data(url)
     except RequestException:
-        return movies
+        return []
 
     events = response.get("eventos_por_dia", {}).get(date2search)
     if not events:
         print("No movies found for today.")
-        return movies
+        return []
 
     events = events.values() if isinstance(events, dict) else events
     print(f"Found {len(events)} events")
+    records = []
     for event in events:
         horarios = event.get("horarios")
         if not horarios:
             continue
-        # horarios encodes local wall-clock time as if it were UTC
-        # (e.g. 16h in São Paulo is stored as 16:00 UTC), so decode as UTC.
-        session_time = datetime.fromtimestamp(horarios[0], tz=timezone.utc)
-        movies.append(
-            Movie(
-                event.get("post_title"),
-                event.get("outra_localidade") or event.get("unidade_title"),
-                session_time.strftime("%H:%M"),
-                # ticket_url=event.get("permalink"),
+        local = event.get("outra_localidade") or event.get("unidade_title")
+        for horario in horarios:
+            # horarios encodes local wall-clock time as if it were UTC
+            # (e.g. 16h in São Paulo is stored as 16:00 UTC), so decode as UTC.
+            session_time = datetime.fromtimestamp(horario, tz=timezone.utc)
+            records.append(
+                {
+                    "name": event.get("post_title"),
+                    "local": local,
+                    "time": session_time.strftime("%H:%M"),
+                    # ticket_url=event.get("permalink"),
+                }
             )
-        )
 
-    return movies
+    return build_grouped_movies(records)

@@ -10,6 +10,9 @@ A movie schedule scraper that collects information from various cinema venues an
 - IMS Paulista
 - Reserva Cultural (São Paulo)
 
+A film's showtimes are consolidated per movie and venue, so if a venue
+lists multiple sessions for the same title they appear on one line.
+
 A film playing at more than one venue on the same day is now shown once
 per venue instead of once overall — the dedupe key is `(name, local)`,
 not just `name`, so a title at both Belas Artes and Reserva Cultural
